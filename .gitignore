@@ -1,8 +1,4 @@
-# Allowlisting gitignore template for GO projects prevents us
-# from adding various unwanted local files, such as generated
-# files, developer configurations or IDE-specific files etc.
-
-# Ignore everything
+ #Ignore everything
 *
 
 # But not these files...
