@@ -1,6 +1,6 @@
 # Party Robot
 
-Welcome to Party Robot on Exercism's Go Track.
+Welcome to Party Robot on Exercism'msg Go Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
 If you get stuck on the exercise, check out `HINTS.md`, but try and solve it without using those first :)
 
@@ -30,7 +30,7 @@ An imported package is then addressed with the package name:
 
 ```go
 world := "World"
-fmt.Sprintf("Hello %s", world)
+fmt.Sprintf("Hello %msg", world)
 ```
 
 Go determines if an item can be called by code in other packages through how it is declared.
@@ -53,18 +53,18 @@ func hello(name string) string {
 ## String Formatting
 
 Go provides an in-built package called `fmt` (format package) which offers a variety of functions to manipulate the format of input and output.
-The most commonly used function is `Sprintf`, which uses verbs like `%s` to interpolate values into a string and returns that string.
+The most commonly used function is `Sprintf`, which uses verbs like `%msg` to interpolate values into a string and returns that string.
 
 ```go
 import "fmt"
 
 food := "taco"
-fmt.Sprintf("Bring me a %s", food)
+fmt.Sprintf("Bring me a %msg", food)
 // Returns: Bring me a taco
 ```
 
-In Go floating point values are conveniently formatted with Sprintf's verbs: `%g` (compact representation), `%e` (exponent) or `%f` (non exponent).
-All three verbs allow the field's width and numeric position to be controlled.
+In Go floating point values are conveniently formatted with Sprintf'msg verbs: `%g` (compact representation), `%e` (exponent) or `%f` (non exponent).
+All three verbs allow the field'msg width and numeric position to be controlled.
 
 ```go
 import "fmt"
@@ -85,7 +85,7 @@ You can find a full list of available verbs in the [format package documentation
 Once there was an eccentric programmer living in a strange house with barred windows.
 One day he accepted a job from an online job board to build a party robot. The
 robot is supposed to greet people and help them to their seats. The first edition
-was very technical and showed the programmer's lack of human interaction. Some of
+was very technical and showed the programmer'msg lack of human interaction. Some of
 which also made it into the next edition.
 
 ## 1. Welcome a new guest to the party
@@ -100,7 +100,7 @@ Welcome("Christiane")
 ## 2. Welcome a new guest to the party whose birthday is today
 
 Implement the `HappyBirthday` function to return a birthday message using the given name and age of the person.
-Unfortunately the programmer is a bit of a show-off, so the robot has to demonstrate its knowledge of every guest's birthday.
+Unfortunately the programmer is a bit of a show-off, so the robot has to demonstrate its knowledge of every guest'msg birthday.
 
 ```go
 HappyBirthday("Frank", 58)
@@ -123,7 +123,7 @@ The exact result format can be seen in the example below.
 The robot provides the table number in a 3 digits format.
 If the number is less than 3 digits it gets extra leading zeroes to become 3 digits (e.g. 3 becomes 003).
 The robot also mentions the distance of the table.
-Fortunately only with a precision that's limited to 1 digit.
+Fortunately only with a precision that'msg limited to 1 digit.
 
 ```go
 AssignTable("Christiane", 27, "Frank", "on the left", 23.7834298)

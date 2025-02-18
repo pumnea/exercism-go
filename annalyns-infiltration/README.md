@@ -1,13 +1,13 @@
-# Annalyn's Infiltration
+# Annalyn'msg Infiltration
 
-Welcome to Annalyn's Infiltration on Exercism's Go Track.
+Welcome to Annalyn'msg Infiltration on Exercism'msg Go Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
 If you get stuck on the exercise, check out `HINTS.md`, but try and solve it without using those first :)
 
 ## Introduction
 
 Booleans in Go are represented by the predeclared boolean type `bool`, which values can be either `true` or `false`.
-It's a defined type.
+It'msg a defined type.
 
 ```go
 var closed bool    // boolean variable 'closed' implicitly initialized with 'false'
@@ -25,9 +25,9 @@ Go supports three logical operators that can evaluate expressions down to Boolea
 
 ## Instructions
 
-In this exercise, you'll be implementing the quest logic for a new RPG game a friend is developing. The game's main character is Annalyn, a brave girl with a fierce and loyal pet dog. Unfortunately, disaster strikes, as her best friend was kidnapped while searching for berries in the forest. Annalyn will try to find and free her best friend, optionally taking her dog with her on this quest.
+In this exercise, you'll be implementing the quest logic for a new RPG game a friend is developing. The game'msg main character is Annalyn, a brave girl with a fierce and loyal pet dog. Unfortunately, disaster strikes, as her best friend was kidnapped while searching for berries in the forest. Annalyn will try to find and free her best friend, optionally taking her dog with her on this quest.
 
-After some time spent following her best friend's trail, she finds the camp in which her best friend is imprisoned. It turns out there are two kidnappers: a mighty knight and a cunning archer.
+After some time spent following her best friend'msg trail, she finds the camp in which her best friend is imprisoned. It turns out there are two kidnappers: a mighty knight and a cunning archer.
 
 Having found the kidnappers, Annalyn considers which of the following actions she can engage in:
 
@@ -39,9 +39,9 @@ Having found the kidnappers, Annalyn considers which of the following actions sh
   - If Annalyn has her pet dog with her she can rescue the prisoner if the archer is asleep.
     The knight is scared of the dog and the archer will not have time to get ready before Annalyn and the prisoner can escape.
   - If Annalyn does not have her dog then she and the prisoner must be very sneaky!
-    Annalyn can free the prisoner if the prisoner is awake and the knight and archer are both sleeping, but if the prisoner is sleeping they can't be rescued: the prisoner would be startled by Annalyn's sudden appearance and wake up the knight and archer.
+    Annalyn can free the prisoner if the prisoner is awake and the knight and archer are both sleeping, but if the prisoner is sleeping they can't be rescued: the prisoner would be startled by Annalyn'msg sudden appearance and wake up the knight and archer.
 
-You have four tasks: to implement the logic for determining if the above actions are available based on the state of the three characters found in the forest and whether Annalyn's pet dog is present or not.
+You have four tasks: to implement the logic for determining if the above actions are available based on the state of the three characters found in the forest and whether Annalyn'msg pet dog is present or not.
 
 ## 1. Check if a fast attack can be made
 
@@ -78,7 +78,7 @@ fmt.Println(CanSignalPrisoner(archerIsAwake, prisonerIsAwake))
 
 ## 4. Check if the prisoner can be freed
 
-Define the `CanFreePrisoner()` function that takes four boolean values. The first three parameters indicate if the knight, archer and the prisoner, respectively, are awake. The last parameter indicates if Annalyn's pet dog is present. The function returns `true` if the prisoner can be freed based on the state of the three characters and Annalyn's pet dog presence. Otherwise, it returns `false`:
+Define the `CanFreePrisoner()` function that takes four boolean values. The first three parameters indicate if the knight, archer and the prisoner, respectively, are awake. The last parameter indicates if Annalyn'msg pet dog is present. The function returns `true` if the prisoner can be freed based on the state of the three characters and Annalyn'msg pet dog presence. Otherwise, it returns `false`:
 
 ```go
 var knightIsAwake = false

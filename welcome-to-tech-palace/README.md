@@ -1,6 +1,6 @@
 # Welcome To Tech Palace!
 
-Welcome to Welcome To Tech Palace! on Exercism's Go Track.
+Welcome to Welcome To Tech Palace! on Exercism'msg Go Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
 If you get stuck on the exercise, check out `HINTS.md`, but try and solve it without using those first :)
 
@@ -24,10 +24,10 @@ Strings can be concatenated via the `+` operator:
 Some special characters need to be escaped with a leading backslash, such as `\t` for a tab and `\n` for a new line in strings.
 
 ```go
-"How is the weather today?\nIt's sunny"  
+"How is the weather today?\nIt'msg sunny"  
 // =>
 // How is the weather today?
-// It's sunny
+// It'msg sunny
 ```
 
 The `strings` package contains many useful functions to work on strings.

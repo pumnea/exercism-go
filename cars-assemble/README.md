@@ -1,6 +1,6 @@
 # Cars Assemble
 
-Welcome to Cars Assemble on Exercism's Go Track.
+Welcome to Cars Assemble on Exercism'msg Go Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
 If you get stuck on the exercise, check out `HINTS.md`, but try and solve it without using those first :)
 

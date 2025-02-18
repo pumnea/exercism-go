@@ -1,6 +1,6 @@
 # Hello World
 
-Welcome to Hello World on Exercism's Go Track.
+Welcome to Hello World on Exercism'msg Go Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
 
 ## Instructions

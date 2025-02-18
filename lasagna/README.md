@@ -1,6 +1,6 @@
-# Gopher's Gorgeous Lasagna
+# Gopher'msg Gorgeous Lasagna
 
-Welcome to Gopher's Gorgeous Lasagna on Exercism's Go Track.
+Welcome to Gopher'msg Gorgeous Lasagna on Exercism'msg Go Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
 If you get stuck on the exercise, check out `HINTS.md`, but try and solve it without using those first :)
 
@@ -38,7 +38,7 @@ implicit := 10   // Implicitly typed as an int
 ```
 
 Once declared, variables can be assigned values using the `=` operator.
-Once declared, a variable's type can never change.
+Once declared, a variable'msg type can never change.
 
 ```go
 count := 1 // Assign initial value
@@ -64,7 +64,7 @@ Parameters must be explicitly typed, there is no type inference.
 
 Values are returned from functions using the `return` keyword.
 
-A function is invoked by specifying the function name and passing arguments for each of the function's parameters.
+A function is invoked by specifying the function name and passing arguments for each of the function'msg parameters.
 
 Note that Go supports two types of comments.
 Single line comments are preceded by `//` and multiline comments are inserted between `/*` and `*/`.
