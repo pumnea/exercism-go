@@ -18,7 +18,6 @@ func (car *Car) DisplayBattery() string {
 	return fmt.Sprintf("Battery at %d%%", car.battery)
 }
 
-// TODO: define the 'CanFinish(trackDistance int) bool' method
 func (car *Car) CanFinish(trackDistance int) bool {
 	return car.battery/car.batteryDrain*car.speed >= trackDistance
 }
