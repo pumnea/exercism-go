@@ -2,7 +2,7 @@
 package scrabble
 
 import (
-	"strings"
+	"unicode"
 )
 
 // Score returns the Scrabble score of a word based on its letter values.
@@ -11,9 +11,9 @@ func Score(word string) int {
 		return 0
 	}
 	score := 0
-	word = strings.ToUpper(word)
+	//	word = strings.ToUpper(word)
 	for _, l := range word {
-		switch l {
+		switch unicode.ToUpper(l) {
 		case 'A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T':
 			score += 1
 		case 'D', 'G':
