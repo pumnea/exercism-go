@@ -11,7 +11,6 @@ func Score(word string) int {
 		return 0
 	}
 	score := 0
-	//	word = strings.ToUpper(word)
 	for _, l := range word {
 		switch unicode.ToUpper(l) {
 		case 'A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T':
