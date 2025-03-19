@@ -1,4 +1,4 @@
-// package dna validates DNA and counts nucleotides.
+// Package dna validates DNA and counts nucleotides.
 package dna
 
 import (
@@ -12,23 +12,33 @@ type Histogram map[rune]int
 // DNA is a list of nucleotides.
 type DNA string
 
-var validNucleotides = map[rune]bool{
-	'A': true, 'C': true, 'G': true, 'T': true,
-}
+// ErrInvalidNucleotide is returned when an invalid nucleotide is encountered.
+var ErrInvalidNucleotide = errors.New("invalid nucleotide in DNA sequence")
 
 // Counts generates a histogram of valid nucleotides in the given DNA.
 // Returns an error if d contains an invalid nucleotide.
 func (d DNA) Counts() (Histogram, error) {
-	h := Histogram{'A': 0, 'C': 0, 'G': 0, 'T': 0}
-	if d == "" {
+	// Initialize histogram with all valid nucleotides at zero.
+	h := Histogram{
+		'A': 0,
+		'C': 0,
+		'G': 0,
+		'T': 0,
+	}
+
+	// Handle empty input
+	if len(d) == 0 {
 		return h, nil
 	}
-	for _, r := range strings.ToUpper(string(d)) {
-		if !validNucleotides[r] {
-			return nil, errors.New("not a valid DNA sequence")
-		}
 
-		h[r]++
+	// Count nucleotides
+	for _, r := range strings.ToUpper(string(d)) {
+		switch r {
+		case 'A', 'C', 'G', 'T':
+			h[r]++
+		default:
+			return nil, ErrInvalidNucleotide
+		}
 	}
 	return h, nil
 }
