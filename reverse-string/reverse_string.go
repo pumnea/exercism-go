@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-// Reverse returns a new string that is reverse of the input.
+// Reverse returns a new string that is a reversed input.
 func Reverse(input string) string {
 	// Early return for an empty string.
 	if len(input) == 0 {
