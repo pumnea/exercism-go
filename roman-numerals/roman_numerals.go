@@ -1,9 +1,12 @@
+// Package romannumerals provides functionality to convert Arabic numerals to traditional Roman numerals.
+// It supports numbers from 1 to 3999, following standard Roman numeral conventions (e.g., subtractive notation like IV for 4).
+// The implementation uses a greedy algorithm for efficient conversion.
 package romannumerals
 
 import "errors"
 
-// M	    D	  C	  L	  X	  V	I
-// 1000	500	100	50	10	5	1
+// ToRomanNumeral converts an Arabic numeral to a Roman numeral string.
+// Returns an error if the number is not in the range 1 to 3999.
 func ToRomanNumeral(input int) (string, error) {
 	// Early error return if number is not within the range 1 .. 3999.
 	if input < 1 || input > 3999 {
