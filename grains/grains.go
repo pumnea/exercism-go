@@ -7,7 +7,7 @@ import (
 	"errors"
 )
 
-// / Square calculates the number of grains on a specific square of the chessboard.
+// Square calculates the number of grains on a specific square of the chessboard.
 // The first square has 1 grain, the second 2, the third 4, etc.
 // Returns an error if the square number is outside the valid range of 1-64.
 func Square(number int) (uint64, error) {
