@@ -11,7 +11,7 @@ func RotationalCipher(plain string, shiftKey int) string {
 		return plain
 	}
 
-	// Normalize shiftKey to 0-25
+	// Normalize shiftKey to the range 0-25; negative shifts are converted to equivalent positive shifts
 	shiftKey = shiftKey % 26
 	if shiftKey < 0 {
 		shiftKey += 26
