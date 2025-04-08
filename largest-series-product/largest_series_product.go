@@ -20,50 +20,31 @@ import (
 //   - "29", span 2 → 18
 //   - "", span 0 → 1
 func LargestSeriesProduct(digits string, span int) (int64, error) {
-	// Validate span
-	if span < 0 {
-		return 0, errors.New("span cannot be negative")
+	// Validate span and handle special case
+	if err := validateSpan(span, len(digits)); err != nil {
+		return 0, err
 	}
 
-	if span > len(digits) {
-		return 0, errors.New("span must be smaller than string length")
-	}
-
-	// Handle special case for empty product
+	// Special case for span=0
 	if span == 0 {
 		return 1, nil
 	}
 
-	// Check for insufficient digits
-	if len(digits) == 0 {
-		return 0, errors.New("empty string requires span of 0")
-	}
-
-	// Check for non-digit characters
-	for _, r := range digits {
-		if !unicode.IsDigit(r) {
-			return 0, errors.New("digits input must only contain digits")
-		}
+	// Validate digits
+	if err := validateDigits(digits); err != nil {
+		return 0, err
 	}
 
 	var maxProduct int64
 
 	// Slide window across digits, computing products
 	for i := 0; i <= len(digits)-span; i++ {
+		// Extract the current window substring
+		window := digits[i : i+span]
 		product := int64(1)
 
 		// Calculate product for current window
-		for j := i; j < i+span; j++ {
-			digit := int64(digits[j] - '0')
-
-			// Skip further multiplication if we hit a zero
-			if digit == 0 {
-				product = 0
-				break
-			}
-
-			product *= digit
-		}
+		product = calcWindowProduct(window, product)
 
 		// Update maximum product (first window or new maximum)
 		if i == 0 || product > maxProduct {
@@ -72,4 +53,50 @@ func LargestSeriesProduct(digits string, span int) (int64, error) {
 	}
 
 	return maxProduct, nil
+}
+
+// validateDigits checks if digits is greater than 0 and it contains only digits.
+func validateDigits(digits string) error {
+	// Check for insufficient digits
+	if len(digits) == 0 {
+		return errors.New("empty string requires span of 0")
+	}
+
+	// Check for non-digit characters
+	for _, r := range digits {
+		if !unicode.IsDigit(r) {
+			return errors.New("digits input must only contain digits")
+		}
+	}
+	return nil
+}
+
+// validateSpan checks if the span is valid for the given string length.
+func validateSpan(span, length int) error {
+	if span < 0 {
+		return errors.New("span cannot be negative")
+	}
+	if span > length {
+		return errors.New("span must not exceed string length")
+	}
+	if span > 0 && length == 0 {
+		return errors.New("empty string requires span of 0")
+	}
+	return nil
+}
+
+// calcWindowProduct returns product of the current window.
+func calcWindowProduct(window string, product int64) int64 {
+	for _, r := range window {
+		digit := int64(r - '0')
+
+		// Skip further multiplication if we hit a zero
+		if digit == 0 {
+			product = 0
+			break
+		}
+
+		product *= digit
+	}
+	return product
 }
