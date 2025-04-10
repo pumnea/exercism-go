@@ -23,9 +23,7 @@ func (i Italian) Greet(name string) string {
 	return fmt.Sprintf("Ciao %s", name)
 }
 
-type Portuguese struct {
-	name string
-}
+type Portuguese struct{}
 
 func (p Portuguese) LanguageName() string {
 	return "Portuguese"
